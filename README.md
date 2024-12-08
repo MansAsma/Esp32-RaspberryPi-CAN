@@ -73,6 +73,10 @@ b. Configure the CAN Interface
   ## 3. Testing the System:
   
   * Power on the ESP32 and Raspberry Pi.
+
+   ![setup](https://github.com/user-attachments/assets/9bdbdbee-4885-400a-9462-b33b44211966)
+
+    
   * Run this command on the Raspberry Pi after setting up the CAN interface (monitors and displays all incoming CAN frames on the specified interface (can0 in this case) ):
 
     ``` candump can0 ```
@@ -82,10 +86,13 @@ b. Configure the CAN Interface
  **  ESP32 side : 
 
  
- ![esp32-CAN](https://github.com/user-attachments/assets/67d88e62-6740-45d0-948e-993d1184dcf6)
+![esp32](https://github.com/user-attachments/assets/2e256134-93eb-4bf5-9f73-ef5fe3768396)
+
 
  ** RaspberryPi side:
  
- ![raspberry-CAN0](https://github.com/user-attachments/assets/9cfc37b6-2e6a-472a-b09b-11ee0a6e250c)
+![raspberryPi](https://github.com/user-attachments/assets/0b4234c5-b197-482a-8172-c3c65a9a4e34)
+
+
 
 
