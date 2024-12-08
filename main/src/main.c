@@ -29,9 +29,6 @@
 // Define the type of DHT sensor being used
 #define SENSOR_TYPE DHT_TYPE_DHT11
 
-// Task priorities for FreeRTOS tasks
-#define TASK_PRIORITY 5
-
 // Function to initialize the SPI bus
 static bool SPI_init(void)
 {
@@ -117,7 +114,7 @@ void app_main(void)
 		}
 		else
 		{
-			ESP_LOGI(TAG, "Temperature Message is sent");
+			ESP_LOGI(TAG, "Temperature Message is sent data MSB: %x, LSB: %x", temp_can_frame_rx[0]->data[0], temp_can_frame_rx[0]->data[1]);
 		}
 
 		// Delay for 3 seconds
@@ -132,7 +129,7 @@ void app_main(void)
 		}
 		else
 		{
-			ESP_LOGI(TAG, "humidity Message is sent");
+			ESP_LOGI(TAG, "humidity Message is sent data MSB: %x, LSB: %x", humidity_can_frame_rx[0]->data[0], humidity_can_frame_rx[0]->data[1]);
 		}
 
 		// Delay for 60 seconds
